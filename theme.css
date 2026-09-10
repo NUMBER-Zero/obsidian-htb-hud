@@ -616,9 +616,10 @@ button.mod-cta {
     box-shadow: 0 0 10px var(--htb-green-glow) inset;
 }
 button:hover, .clickable-icon:hover, .nav-action-button:hover {
-    background-color: var(--htb-green) !important;
-    color: var(--htb-bg-deep) !important;
-    box-shadow: 0 0 15px var(--htb-green-glow-strong);
+    background-color: color-mix(in srgb, var(--htb-green) 15%, transparent) !important;
+    color: var(--htb-green) !important;
+    box-shadow: inset 0 0 10px color-mix(in srgb, var(--htb-green) 10%, transparent), 0 0 5px color-mix(in srgb, var(--htb-green) 20%, transparent) !important;
+    transition: all 0.2s ease;
 }
 
 .modal-bg {
