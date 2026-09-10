@@ -616,18 +616,18 @@ button.mod-cta {
     box-shadow: 0 0 10px var(--htb-green-glow) inset;
 }
 button:hover, .clickable-icon:hover, .nav-action-button:hover {
-    background-color: var(--htb-green) !important;
-    color: var(--htb-bg-deep) !important;
+    background-color: color-mix(in srgb, var(--htb-green) 25%, transparent) !important;
+    color: #ffffff !important;
     box-shadow: 0 0 15px var(--htb-green-glow) !important;
     transition: all 0.2s ease;
 }
 
 /* Force any icons (SVG) inside hovered buttons to flip to the dark background color for perfect contrast */
 button:hover *, .clickable-icon:hover *, .nav-action-button:hover * {
-    color: var(--htb-bg-deep) !important;
-    fill: var(--htb-bg-deep) !important;
-    stroke: var(--htb-bg-deep) !important;
-    filter: none !important;
+    color: #ffffff !important;
+    fill: #ffffff !important;
+    stroke: #ffffff !important;
+    filter: drop-shadow(0 0 5px var(--htb-green)) !important;
 }
 
 .modal-bg {
@@ -663,7 +663,7 @@ button:hover *, .clickable-icon:hover *, .nav-action-button:hover * {
 .markdown-rendered pre {
     border: 1px solid var(--htb-green-glow-faint);
     border-left: 3px solid var(--htb-green);
-    background-color: var(--htb-bg-deep) !important;
+    background-color: #ffffff !important;
     box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
 }
 
@@ -686,7 +686,7 @@ button:hover *, .clickable-icon:hover *, .nav-action-button:hover * {
     border: 1px solid var(--htb-green); color: var(--htb-green) !important;
     padding: 2px 6px; font-size: 0.85em; text-transform: uppercase;
 }
-.tag:hover { background-color: var(--htb-green) !important; color: var(--htb-bg-deep) !important; box-shadow: 0 0 10px var(--htb-green-glow); }
+.tag:hover { background-color: var(--htb-green) !important; color: #ffffff !important; box-shadow: 0 0 10px var(--htb-green-glow); }
 
 /* ===================================== */
 /* FORCE TOGGLE SWITCH FIXES             */
@@ -745,7 +745,7 @@ button:hover *, .clickable-icon:hover *, .nav-action-button:hover * {
 
 /* 3. Hardware Control Ribbon (Base layout only, standard hover) */
 .workspace-ribbon.mod-left {
-    background-color: var(--htb-bg-deep) !important;
+    background-color: #ffffff !important;
     border-right: 1px solid var(--htb-green) !important;
     box-shadow: inset -5px 0 15px rgba(0,0,0,0.8);
 }
@@ -802,7 +802,7 @@ button:hover *, .clickable-icon:hover *, .nav-action-button:hover * {
 
 /* 10. HUD Data Tooltips (Optional via Style Settings) */
 .htb-tooltips .tooltip {
-    background-color: var(--htb-bg-deep) !important;
+    background-color: #ffffff !important;
     border: 1px solid var(--htb-green) !important;
     color: var(--htb-green) !important;
     font-family: var(--font-monospace) !important;
@@ -822,7 +822,7 @@ button:hover *, .clickable-icon:hover *, .nav-action-button:hover * {
 /* 11. Cyber Search Highlights */
 .search-result-file-matched-text, .is-flashing {
     background-color: var(--htb-green) !important;
-    color: var(--htb-bg-deep) !important;
+    color: #ffffff !important;
     font-weight: bold;
     box-shadow: 0 0 8px var(--htb-green-glow);
 }
@@ -842,7 +842,7 @@ button:hover *, .clickable-icon:hover *, .nav-action-button:hover * {
     border-left: 4px solid transparent;
 }
 .suggestion-item.is-selected {
-    background-color: var(--htb-green) !important;
+    background-color: color-mix(in srgb, var(--htb-green) 25%, transparent) !important;
     border-left: 4px solid color-mix(in srgb, var(--htb-green) 50%, #fff) !important;
     box-shadow: 0 0 15px var(--htb-green-glow) !important;
 }
@@ -850,10 +850,10 @@ button:hover *, .clickable-icon:hover *, .nav-action-button:hover * {
 .suggestion-item.is-selected .suggestion-title,
 .suggestion-item.is-selected .suggestion-note,
 .suggestion-item.is-selected * {
-    color: var(--htb-bg-deep) !important;
-    fill: var(--htb-bg-deep) !important;
-    stroke: var(--htb-bg-deep) !important;
-    filter: none !important;
+    color: #ffffff !important;
+    fill: #ffffff !important;
+    stroke: #ffffff !important;
+    filter: drop-shadow(0 0 5px var(--htb-green)) !important;
 }
 
 /* Hardware Sliders & Dropdowns */
@@ -923,7 +923,7 @@ select.dropdown:hover {
 }
 .metadata-property-value .multi-select-pill:hover {
     background-color: var(--htb-green) !important;
-    color: var(--htb-bg-deep) !important;
+    color: #ffffff !important;
     box-shadow: 0 0 10px var(--htb-green-glow) !important;
 }
 .metadata-add-button {
@@ -934,11 +934,11 @@ select.dropdown:hover {
 
 /* Fix Native & Custom Dropdown Menus */
 select option {
-    background-color: var(--htb-bg-deep) !important;
+    background-color: #ffffff !important;
     color: var(--htb-green) !important;
 }
 .menu, .suggestion-container {
-    background-color: var(--htb-bg-deep) !important;
+    background-color: #ffffff !important;
     border: 1px solid var(--htb-green) !important;
     
     box-shadow: 0 0 15px var(--htb-green-glow-strong) !important;
@@ -950,7 +950,7 @@ select option {
 }
 .menu-item:hover, .menu-item.selected, .menu-item.is-active {
     background-color: var(--htb-green) !important;
-    color: var(--htb-bg-deep) !important;
+    color: #ffffff !important;
     box-shadow: inset 0 0 10px rgba(0,0,0,0.5) !important;
 }
 /* Override inline property colors in dropdowns */
