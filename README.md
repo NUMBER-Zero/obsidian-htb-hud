@@ -11,9 +11,16 @@ just another boring theme
 
 ## Installation
 
+### Community Store
 1. Open Obsidian **Settings** -> **Appearance**.
 2. Click **Manage** under Themes.
 3. Search for **HTB HUD** and click **Install and Use**.
+
+### Manual Installation
+1. Download 	heme.css and manifest.json from this repository.
+2. Inside your Obsidian vault, navigate to .obsidian/themes/ (create the 	hemes folder if it doesn't exist).
+3. Create a new folder named HTB HUD and place both files inside it.
+4. Open Obsidian **Settings** -> **Appearance** and select **HTB HUD** from the Themes dropdown.
 
 ## Required Plugins
 
@@ -33,21 +40,12 @@ Through the Style Settings plugin, you can customize:
 
 ---
 
-## 📸 Showcase & Gallery
+## Showcase
 
-### The Workspace
-A sleek, high-contrast HUD optimized for dark environments and maximum readability.
-*(Save additional screenshots into an images/ folder in your repository to show them off here)*
 ![Workspace Showcase](images/workspace.png)
 
-### Hardware Config & Settings
-The settings menu rebuilt to resemble a physical BIOS/Mainframe config panel.
 ![Settings Menu](images/settings.png)
 
-### Command Targeting
-Zero-latency targeting system with neon highlights for the command palette.
 ![Command Palette](images/palette.png)
 
-### Graph View Radar
-Interactive data nodes glowing like radar signatures against the deep background.
 ![Graph View](images/graph.png)
