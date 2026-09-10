@@ -41,10 +41,10 @@ Open the **Style Settings** plugin to customize:
 
 ## 📸 Showcase
 
-![Workspace Showcase](images/workspace.png)
-
-![Settings Menu](images/settings.png)
-
-![Command Palette](images/palette.png)
-
-![Graph View](images/graph.png)
+![Showcase Image](images/Screenshot%202026-09-10%20130404.png)
+![Showcase Image](images/Screenshot%202026-09-10%20132629.png)
+![Showcase Image](images/Screenshot%202026-09-10%20132805.png)
+![Showcase Image](images/Screenshot%202026-09-10%20144811.png)
+![Showcase Image](images/Screenshot%202026-09-10%20145417.png)
+![Showcase Image](images/Screenshot%202026-09-10%20145450.png)
+![Showcase Image](images/Screenshot%202026-09-10%20152034.png)
