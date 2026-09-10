@@ -1,4 +1,4 @@
-/* 
+﻿/* 
   HTB HUD Theme for Obsidian
   Inspired by Hack The Box - Cyberpunk & Hacker Aesthetics
   Zero UI/UX Error Tolerances, Maximum Compatibility
@@ -208,12 +208,12 @@ settings:
     
     /* GRAPH VIEW COLORS */
     --graph-text: #ffffff; 
-    --graph-node: var(--htb-green);
-    --graph-node-focused: #ff003c;
-    --graph-node-unresolved: #ffb800; 
-    --graph-line: color-mix(in srgb, var(--htb-green) 40%, transparent); /* BOOSTED OPACITY */
-    --graph-node-tag: #00b8ff;
-    --graph-node-attachment: #a374ff;
+    --graph-node: #ffffff;
+    --graph-node-focused: #ffcc00;
+    --graph-node-unresolved: rgba(255, 255, 255, 0.2); 
+    --graph-line: rgba(0, 180, 255, 0.4); /* BOOSTED OPACITY */
+    --graph-node-tag: #ff00ff;
+    --graph-node-attachment: #00ffff;
 }
 
 /* Global Text Selection */
@@ -1084,4 +1084,13 @@ button:hover, .clickable-icon:hover {
     stroke: #000000 !important;
     fill: none !important;
     filter: none !important;
+}
+
+/* ===================================== */
+/* GALAXY GRAPH VIEW COLORS              */
+/* ===================================== */
+.workspace-leaf-content[data-type="graph"] .view-content,
+.workspace-leaf-content[data-type="localgraph"] .view-content {
+    background-color: #030408 !important; /* Deep pitch black space */
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.9);
 }
