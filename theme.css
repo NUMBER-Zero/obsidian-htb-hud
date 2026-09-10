@@ -615,19 +615,10 @@ button.mod-cta {
     background-color: var(--htb-green-glow-faint) !important;
     box-shadow: 0 0 10px var(--htb-green-glow) inset;
 }
-button:hover, .clickable-icon:hover, .nav-action-button:hover {
-    background-color: color-mix(in srgb, var(--htb-green) 15%, transparent) !important;
-    box-shadow: none !important;
-    transition: all 0.2s ease;
-}
+
 
 /* Force any icons (SVG) inside hovered buttons to flip to the dark background color for perfect contrast */
-button:hover *, .clickable-icon:hover *, .nav-action-button:hover * {
-    color: var(--htb-green) !important;
-    fill: var(--htb-green) !important;
-    stroke: var(--htb-green) !important;
-    filter: none !important;
-}
+
 
 .modal-bg {
     backdrop-filter: blur(3px) grayscale(0.8);
@@ -1048,4 +1039,49 @@ select option {
 .htb-sharp-corners .search-input-container input,
 .htb-sharp-corners .prompt { 
     border-radius: 0 !important; 
+}
+
+/* --- HUD Specific Hovers (Solid Green + Hollow Black Icon) --- */
+.workspace-ribbon.mod-left .clickable-icon:hover,
+.nav-action-button:hover {
+    background-color: var(--htb-green) !important;
+    box-shadow: none !important;
+    transition: all 0.15s ease;
+}
+
+.workspace-ribbon.mod-left .clickable-icon:hover *,
+.nav-action-button:hover * {
+    color: #000000 !important;
+    stroke: #000000 !important;
+    fill: none !important;
+    filter: none !important;
+}
+
+/* Override stubborn plugin icons in the left ribbon (like Advanced Tables) */
+.workspace-ribbon.mod-left .clickable-icon:hover svg,
+.workspace-ribbon.mod-left .clickable-icon:hover svg * {
+    color: #000000 !important;
+    stroke: #000000 !important;
+    fill: none !important;
+}
+
+/* --- Global Safe Hover (For all other plugins like Editing Toolbar) --- */
+button:hover, .clickable-icon:hover {
+    background-color: color-mix(in srgb, var(--htb-green) 20%, transparent);
+    box-shadow: none;
+    transition: all 0.15s ease;
+}
+
+.nav-file-title:hover, .nav-folder-title:hover {
+    background-color: var(--htb-green) !important;
+    border-left: 2px solid #000000 !important;
+    box-shadow: none !important;
+    transition: all 0.15s ease;
+}
+
+.nav-file-title:hover *, .nav-folder-title:hover * {
+    color: #000000 !important;
+    stroke: #000000 !important;
+    fill: none !important;
+    filter: none !important;
 }
