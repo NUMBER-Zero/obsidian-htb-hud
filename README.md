@@ -33,17 +33,21 @@ Through the Style Settings plugin, you can customize:
 
 ---
 
-## Showcase
+## 📸 Showcase & Gallery
 
 ### The Workspace
-*(Save a screenshot named workspace.png into an images/ folder in your repository)*
+A sleek, high-contrast HUD optimized for dark environments and maximum readability.
+*(Save additional screenshots into an images/ folder in your repository to show them off here)*
 ![Workspace Showcase](images/workspace.png)
 
 ### Hardware Config & Settings
+The settings menu rebuilt to resemble a physical BIOS/Mainframe config panel.
 ![Settings Menu](images/settings.png)
 
 ### Command Targeting
+Zero-latency targeting system with neon highlights for the command palette.
 ![Command Palette](images/palette.png)
 
 ### Graph View Radar
+Interactive data nodes glowing like radar signatures against the deep background.
 ![Graph View](images/graph.png)
