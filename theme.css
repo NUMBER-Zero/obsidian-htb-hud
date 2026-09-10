@@ -803,6 +803,9 @@ button:hover, .clickable-icon:hover, .nav-action-button:hover {
     padding: 6px 10px !important;
     transition: none !important;
     animation: boot-tooltip 0.1s forwards;
+    height: auto !important;
+    min-height: min-content !important;
+    line-height: 1.5 !important;
 }
 .htb-tooltips .tooltip-arrow { border-bottom-color: var(--htb-green) !important; border-top-color: var(--htb-green) !important; }
 @keyframes boot-tooltip { 0% { opacity: 0; transform: scale(0.9); } 100% { opacity: 1; transform: scale(1); } }
