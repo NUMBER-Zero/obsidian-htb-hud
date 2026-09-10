@@ -616,18 +616,17 @@ button.mod-cta {
     box-shadow: 0 0 10px var(--htb-green-glow) inset;
 }
 button:hover, .clickable-icon:hover, .nav-action-button:hover {
-    background-color: color-mix(in srgb, var(--htb-green) 25%, transparent) !important;
-    color: #ffffff !important;
-    box-shadow: 0 0 15px var(--htb-green-glow) !important;
+    background-color: color-mix(in srgb, var(--htb-green) 15%, transparent) !important;
+    box-shadow: none !important;
     transition: all 0.2s ease;
 }
 
 /* Force any icons (SVG) inside hovered buttons to flip to the dark background color for perfect contrast */
 button:hover *, .clickable-icon:hover *, .nav-action-button:hover * {
-    color: #ffffff !important;
-    fill: #ffffff !important;
-    stroke: #ffffff !important;
-    filter: drop-shadow(0 0 5px var(--htb-green)) !important;
+    color: var(--htb-green) !important;
+    fill: var(--htb-green) !important;
+    stroke: var(--htb-green) !important;
+    filter: none !important;
 }
 
 .modal-bg {
@@ -842,18 +841,15 @@ button:hover *, .clickable-icon:hover *, .nav-action-button:hover * {
     border-left: 4px solid transparent;
 }
 .suggestion-item.is-selected {
-    background-color: color-mix(in srgb, var(--htb-green) 25%, transparent) !important;
-    border-left: 4px solid color-mix(in srgb, var(--htb-green) 50%, #fff) !important;
-    box-shadow: 0 0 15px var(--htb-green-glow) !important;
+    background-color: color-mix(in srgb, var(--htb-green) 15%, transparent) !important;
+    border-left: 2px solid var(--htb-green) !important;
+    box-shadow: none !important;
 }
-.suggestion-item.is-selected,
-.suggestion-item.is-selected .suggestion-title,
-.suggestion-item.is-selected .suggestion-note,
-.suggestion-item.is-selected * {
-    color: #ffffff !important;
-    fill: #ffffff !important;
-    stroke: #ffffff !important;
-    filter: drop-shadow(0 0 5px var(--htb-green)) !important;
+.suggestion-item.is-selected *, .suggestion-item.is-selected .suggestion-title, .suggestion-item.is-selected .suggestion-note {
+    color: var(--htb-green) !important;
+    fill: var(--htb-green) !important;
+    stroke: var(--htb-green) !important;
+    filter: none !important;
 }
 
 /* Hardware Sliders & Dropdowns */
