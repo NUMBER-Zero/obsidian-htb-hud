@@ -838,28 +838,22 @@ button:hover *, .clickable-icon:hover *, .nav-action-button:hover * {
 
 /* Command Palette Targeting */
 .suggestion-item {
-    transition: all 0.1s ease;
-    border-left: 2px solid transparent;
+    transition: none !important;
+    border-left: 4px solid transparent;
 }
 .suggestion-item.is-selected {
-    background-color: color-mix(in srgb, var(--htb-green) 15%, transparent) !important;
-    border-left: 2px solid var(--htb-green) !important;
-    color: var(--htb-green) !important;
-    box-shadow: inset 10px 0 20px -10px var(--htb-green-glow);
+    background-color: var(--htb-green) !important;
+    border-left: 4px solid color-mix(in srgb, var(--htb-green) 50%, #fff) !important;
+    box-shadow: 0 0 15px var(--htb-green-glow) !important;
 }
-.suggestion-item.is-selected .suggestion-title::before {
-    content: '[ ';
-    color: #00b8ff;
-    font-family: var(--font-monospace);
-}
-.suggestion-item.is-selected .suggestion-title::after {
-    content: ' ]';
-    color: #00b8ff;
-    font-family: var(--font-monospace);
-}
+.suggestion-item.is-selected,
 .suggestion-item.is-selected .suggestion-title,
-.suggestion-item.is-selected .suggestion-note {
-    color: var(--htb-green) !important;
+.suggestion-item.is-selected .suggestion-note,
+.suggestion-item.is-selected * {
+    color: var(--htb-bg-deep) !important;
+    fill: var(--htb-bg-deep) !important;
+    stroke: var(--htb-bg-deep) !important;
+    filter: none !important;
 }
 
 /* Hardware Sliders & Dropdowns */
