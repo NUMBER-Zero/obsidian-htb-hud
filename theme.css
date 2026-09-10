@@ -838,12 +838,24 @@ button:hover *, .clickable-icon:hover *, .nav-action-button:hover * {
 /* Command Palette Targeting */
 .suggestion-item {
     transition: none !important;
-    border-left: 4px solid transparent;
+    border-left: 2px solid transparent;
 }
 .suggestion-item.is-selected {
     background-color: color-mix(in srgb, var(--htb-green) 15%, transparent) !important;
     border-left: 2px solid var(--htb-green) !important;
-    box-shadow: none !important;
+    box-shadow: inset 10px 0 20px -10px var(--htb-green-glow) !important;
+}
+.suggestion-item.is-selected .suggestion-title::before {
+    content: '[ ';
+    color: var(--htb-green) !important;
+    font-family: var(--font-monospace);
+    opacity: 0.8;
+}
+.suggestion-item.is-selected .suggestion-title::after {
+    content: ' ]';
+    color: var(--htb-green) !important;
+    font-family: var(--font-monospace);
+    opacity: 0.8;
 }
 .suggestion-item.is-selected *, .suggestion-item.is-selected .suggestion-title, .suggestion-item.is-selected .suggestion-note {
     color: var(--htb-green) !important;
