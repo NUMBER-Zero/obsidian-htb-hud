@@ -1,7 +1,7 @@
 # HTB HUD
 
 **Author:** DR4V3N1X (Yahya Ouarrak)  
-**Version:** 1.1.0  
+**Version:** 1.2.0  
 
 ![HTB HUD Showcase](screenshot.png)
 
