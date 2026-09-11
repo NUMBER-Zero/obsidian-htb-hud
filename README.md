@@ -1,4 +1,4 @@
-﻿# HTB HUD
+# HTB HUD
 
 **Author:** DR4V3N1X (Yahya Ouarrak)  
 **Version:** 1.1.0  
@@ -16,7 +16,19 @@ To fully utilize this theme, you must install the **Style Settings** plugin:
 2. Search for **Style Settings** and install it.
 3. Enable the plugin to access the HTB HUD configuration menu.
 
-## 🛠️ Customization
+## 💎 Recommended Plugins
+
+To get the absolute ultimate hacker workstation experience, I highly recommend installing these community plugins alongside the theme:
+
+- **Style Settings:** (Required) Unlocks the massive customization menu for this theme.
+- **Shiki Highlighter:** Perfectly syntax-highlights your code blocks using native VSCode themes.
+- **Editing Toolbar:** Adds a slick, accessible formatting toolbar to your workspace.
+- **Iconize:** Lets you add awesome custom icons to your folders and files.
+- **Templater:** For automating your note creation and hacking templates.
+
+---
+
+## ⚙️ Customization
 
 Open the **Style Settings** plugin to customize:
 - **Colors:** Modify base HUD colors, backgrounds, and specific H1-H6 heading colors.

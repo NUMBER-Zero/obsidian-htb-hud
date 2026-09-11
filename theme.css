@@ -109,6 +109,11 @@ settings:
     description: Style hover tooltips as sharp neon data readouts
     type: class-toggle
     default: false
+  - id: htb-image-borders
+    title: HUD Image Borders
+    description: Apply hacker green borders and glowing effects to images
+    type: class-toggle
+    default: true
 */
 
 /* Core Defaults */
@@ -428,16 +433,16 @@ settings:
 }
 
 /* HUD Image Targeting Reticle Borders */
-.markdown-rendered img {
+.htb-image-borders .markdown-rendered img {
     border: 1px solid color-mix(in srgb, var(--htb-green) 30%, transparent);
     transition: all 0.3s ease;
     filter: grayscale(0.2);
 }
-.markdown-rendered img:hover {
+.htb-image-borders .markdown-rendered img:hover {
     border: 1px solid var(--htb-green);
     box-shadow: 0 0 20px var(--htb-green-glow);
     filter: grayscale(0);
-    clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
+    transform: scale(1.02);
 }
 
 /* Global Hacker Search Bar */
@@ -500,6 +505,19 @@ settings:
     padding-right: 30px;
 }
 
+/* Move the collapse arrow to the left so it doesn't overlap the title */
+.markdown-rendered .heading-collapse-indicator {
+    margin-left: -35px !important;
+    padding-right: 15px !important;
+    transition: all 0.2s ease;
+}
+.markdown-rendered h1 .heading-collapse-indicator svg, .markdown-rendered h1 + .heading-collapse-indicator svg, .HyperMD-header-1 .collapse-indicator svg { color: var(--h1-color) !important; stroke: var(--h1-color) !important; }
+.markdown-rendered h2 .heading-collapse-indicator svg, .markdown-rendered h2 + .heading-collapse-indicator svg, .HyperMD-header-2 .collapse-indicator svg { color: var(--h2-color) !important; stroke: var(--h2-color) !important; }
+.markdown-rendered h3 .heading-collapse-indicator svg, .markdown-rendered h3 + .heading-collapse-indicator svg, .HyperMD-header-3 .collapse-indicator svg { color: var(--h3-color) !important; stroke: var(--h3-color) !important; }
+.markdown-rendered h4 .heading-collapse-indicator svg, .markdown-rendered h4 + .heading-collapse-indicator svg, .HyperMD-header-4 .collapse-indicator svg { color: var(--h4-color) !important; stroke: var(--h4-color) !important; }
+.markdown-rendered h5 .heading-collapse-indicator svg, .markdown-rendered h5 + .heading-collapse-indicator svg, .HyperMD-header-5 .collapse-indicator svg { color: var(--h5-color) !important; stroke: var(--h5-color) !important; }
+.markdown-rendered h6 .heading-collapse-indicator svg, .markdown-rendered h6 + .heading-collapse-indicator svg, .HyperMD-header-6 .collapse-indicator svg { color: var(--h6-color) !important; stroke: var(--h6-color) !important; }
+
 .markdown-rendered h1 {
     border-bottom: 2px solid var(--h1-color);
     background: linear-gradient(90deg, color-mix(in srgb, var(--h1-color) 15%, transparent) 0%, transparent 100%);
@@ -507,10 +525,13 @@ settings:
     text-shadow: 0 0 10px color-mix(in srgb, var(--h1-color) 50%, transparent);
 }
 .markdown-rendered h2 {
-    border-bottom: 1px dashed var(--h2-color);
     background: linear-gradient(90deg, color-mix(in srgb, var(--h2-color) 10%, transparent) 0%, transparent 100%);
-    border-right: 2px dashed var(--h2-color);
+    border-left: 4px solid var(--h2-color);
+    padding-left: 8px;
     text-shadow: 0 0 8px color-mix(in srgb, var(--h2-color) 40%, transparent);
+}
+.markdown-rendered h2 .heading-collapse-indicator, .markdown-rendered h2 + .heading-collapse-indicator {
+    margin-left: -42px !important;
 }
 .markdown-rendered h3 {
     position: relative;
@@ -646,15 +667,54 @@ button.mod-cta {
 
 .markdown-rendered code {
     background-color: var(--htb-bg-mid) !important;
-    color: var(--htb-green) !important;
     border: 1px solid var(--htb-green-glow-faint);
     padding: 2px 5px;
+}
+.markdown-rendered :not(pre) > code {
+    color: var(--htb-green) !important;
 }
 .markdown-rendered pre {
     border: 1px solid var(--htb-green-glow-faint);
     border-left: 3px solid var(--htb-green);
     background-color: var(--htb-bg-deep) !important;
     box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+}
+/* Codeblocks in Live Preview (Editing Mode) */
+.markdown-source-view.mod-cm6 .HyperMD-codeblock-bg {
+    background-color: var(--htb-bg-deep) !important;
+    border-left: 3px solid var(--htb-green) !important;
+    border-right: 1px solid var(--htb-green-glow-faint) !important;
+}
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-begin {
+    border-top: 1px solid var(--htb-green-glow-faint) !important;
+    background-color: var(--htb-bg-deep) !important;
+    box-shadow: inset 0 10px 10px -10px rgba(0,0,0,0.5);
+}
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-end {
+    border-bottom: 1px solid var(--htb-green-glow-faint) !important;
+    background-color: var(--htb-bg-deep) !important;
+    box-shadow: inset 0 -10px 10px -10px rgba(0,0,0,0.5);
+}
+.copy-code-button {
+    background-color: transparent !important;
+    border: 1px solid transparent !important;
+    color: var(--htb-text-main) !important;
+    padding: 6px;
+    border-radius: 4px;
+    opacity: 0.7;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.copy-code-button:hover {
+    color: var(--htb-bg-deep) !important;
+    background-color: var(--htb-green) !important;
+    border: 1px solid var(--htb-green) !important;
+    box-shadow: 0 0 15px var(--htb-green-glow) !important;
+    opacity: 1;
+    transform: scale(1.1);
+}
+.copy-code-button:active {
+    transform: scale(0.9);
+    box-shadow: none !important;
 }
 
 /* Checkboxes */
@@ -698,33 +758,49 @@ button.mod-cta {
     box-shadow: 0 0 10px var(--htb-green) !important;
 }
 
+/* Fix visibility of toggles when hovered inside green menu items */
+.menu-item:hover .checkbox-container {
+    border: 1px solid var(--htb-bg-deep) !important;
+    background-color: var(--htb-bg-deep) !important;
+}
+.menu-item:hover .checkbox-container::after {
+    background-color: var(--htb-text-faint) !important;
+    box-shadow: none !important;
+}
+.menu-item:hover .checkbox-container.is-enabled {
+    border: 1px solid var(--htb-bg-deep) !important;
+    background-color: var(--htb-bg-deep) !important;
+}
+.menu-item:hover .checkbox-container.is-enabled::after {
+    background-color: var(--htb-green) !important;
+}
+
 /* ===================================== */
 /* V2.0 ULTIMATE POLISH                  */
 /* ===================================== */
 
 /* 2. Secure Data Embeds (Transclusions) */
-.markdown-rendered .internal-embed {
+.markdown-rendered .internal-embed:not(.image-embed):not(:has(img)) {
     border: 1px solid var(--htb-green) !important;
     background-color: color-mix(in srgb, var(--htb-bg-mid) 80%, transparent) !important;
     padding: 10px 15px 10px 30px !important;
-    position: relative;
+    border-radius: 4px;
     box-shadow: inset 0 0 10px var(--htb-green-glow-faint);
     margin: 1.5em 0;
 }
-.markdown-rendered .internal-embed::before {
+.markdown-rendered .internal-embed:not(.image-embed):not(:has(img))::before {
     content: 'SECURE LINK';
     position: absolute;
     top: -8px;
-    left: -1px;
-    background-color: var(--htb-green);
-    color: var(--htb-bg-deep);
-    font-size: 0.6em;
-    font-family: var(--font-monospace);
-    padding: 2px 5px;
+    left: 10px;
+    background-color: var(--htb-bg-deep);
+    color: var(--htb-green);
+    padding: 0 5px;
+    font-size: 10px;
     font-weight: bold;
     letter-spacing: 1px;
 }
-.markdown-rendered .internal-embed::after {
+.markdown-rendered .internal-embed:not(.image-embed):not(:has(img))::after {
     content: '';
     position: absolute;
     top: 0; left: 0; bottom: 0;
@@ -800,14 +876,13 @@ button.mod-cta {
     font-size: 0.8em !important;
     box-shadow: 0 0 15px var(--htb-green-glow) !important;
     padding: 6px 10px !important;
-    transition: none !important;
-    animation: boot-tooltip 0.1s forwards;
     height: auto !important;
     min-height: min-content !important;
     line-height: 1.5 !important;
+    animation: boot-tooltip 0.15s ease-in 0.35s backwards !important;
 }
 .htb-tooltips .tooltip-arrow { border-bottom-color: var(--htb-green) !important; border-top-color: var(--htb-green) !important; }
-@keyframes boot-tooltip { 0% { opacity: 0; transform: scale(0.9); } 100% { opacity: 1; transform: scale(1); } }
+@keyframes boot-tooltip { 0% { opacity: 0; } 100% { opacity: 1; } }
 
 /* 11. Cyber Search Highlights */
 .search-result-file-matched-text, .is-flashing {
